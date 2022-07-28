@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe сборка активного файла",
+			"command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-std=c++20",
+				"-m64",
+				"-mconsole",
+				"-g",
+				"-DGLEW_STATIC",
+				"${file}",
+				"-o",
+				"${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+				"C:\\msys64\\mingw64\\include\\GLAD\\glad.c",
+				"-I", "${workspaceFolder}",
+				"-l", "glfw3",
+				"-l", "glew32",
+				"-l", "libfreeglut",
+				"-l", "opengl32",
+				"-l", "libassimp"
+			],
+			"options": {
+				"cwd": "C:\\msys64\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "компилятор: C:\\msys64\\mingw64\\bin\\g++.exe"
+		}
+	]
+}
